@@ -16,7 +16,11 @@ class WebServerRunnerTest extends TestCase
         $this->assertNull($this->getWebServerManager($webServerRunner));
 
         $webServerRunner->start();
-        $this->assertTrue($this->getWebServerManager($webServerRunner)->isStarted());
+        $webServerManager = $this->getWebServerManager($webServerRunner);
+
+        if (null !== $webServerManager) {
+            $this->assertTrue($webServerManager->isStarted());
+        }
 
         $webServerRunner->stop();
         $this->assertNull($this->getWebServerManager($webServerRunner));

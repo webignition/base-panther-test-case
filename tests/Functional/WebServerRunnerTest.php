@@ -1,4 +1,8 @@
-<?php declare(strict_types=1);
+<?php
+
+/** @noinspection PhpUnhandledExceptionInspection */
+
+declare(strict_types=1);
 
 namespace webignition\BasePantherTestCase\Tests\Functional;
 

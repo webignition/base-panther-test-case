@@ -4,6 +4,7 @@ namespace webignition\BasePantherTestCase\Tests\Functional;
 
 use Symfony\Component\Panther\DomCrawler\Crawler;
 use webignition\BasePantherTestCase\AbstractBrowserTestCase;
+use webignition\BasePantherTestCase\Options;
 
 class AbstractBrowserTestCaseTest extends AbstractBrowserTestCase
 {
@@ -22,7 +23,7 @@ class AbstractBrowserTestCaseTest extends AbstractBrowserTestCase
 
     public function testExamineBrowser()
     {
-        $crawler = self::$client->request('GET', '/index.html');
+        $crawler = self::$client->request('GET', Options::getBaseUri() . '/index.html');
 
         $this->assertInstanceOf(Crawler::class, $crawler);
         $this->assertSame('Test fixture web server default document', self::$client->getTitle());

@@ -2,10 +2,9 @@
 
 namespace webignition\BasePantherTestCase;
 
-use PHPUnit\Framework\TestCase;
-use Symfony\Component\Panther\Client as PantherClient;
+use webignition\BaseBasilTestCase\AbstractBaseTest;
 
-abstract class AbstractBrowserTestCase extends TestCase
+abstract class AbstractBrowserTestCase extends AbstractBaseTest
 {
     /**
      * @var WebServerRunner
@@ -13,46 +12,27 @@ abstract class AbstractBrowserTestCase extends TestCase
     private static $webServerRunner;
 
     /**
-     * @var PantherClientFactory
-     */
-    private static $pantherClientFactory;
-
-    /**
-     * @var PantherClient
-     */
-    protected static $client;
-
-    /**
      * @var string|null
      */
     protected static $webServerDir;
 
-    /**
-     * @var string|null
-     */
-    protected static $baseUri;
-
     public static function setUpBeforeClass(): void
     {
-        if (null === self::$baseUri) {
-            self::$baseUri = Options::getBaseUri();
-        }
-
         self::$webServerRunner = new WebServerRunner((string) realpath((string) self::$webServerDir));
         self::$webServerRunner->start();
 
-        self::$pantherClientFactory = new PantherClientFactory();
-        self::$client = self::$pantherClientFactory->create(self::$baseUri);
+        parent::setUpBeforeClass();
     }
 
     public static function tearDownAfterClass(): void
     {
+        parent::tearDownAfterClass();
+
         static::stopWebServer();
     }
 
     private static function stopWebServer()
     {
         self::$webServerRunner->stop();
-        self::$pantherClientFactory->destroy(self::$client);
     }
 }

@@ -4,7 +4,7 @@ namespace webignition\BasePantherTestCase\Tests\Functional;
 
 use Symfony\Component\Panther\DomCrawler\Crawler;
 use webignition\BasePantherTestCase\AbstractBrowserTestCase;
-use webignition\BasePantherTestCase\Options;
+use webignition\SymfonyPantherWebServerRunner\Options;
 
 class AbstractBrowserTestCaseTest extends AbstractBrowserTestCase
 {

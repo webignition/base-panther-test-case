@@ -3,6 +3,7 @@
 namespace webignition\BasePantherTestCase;
 
 use webignition\BaseBasilTestCase\AbstractBaseTest;
+use webignition\SymfonyPantherWebServerRunner\WebServerRunner;
 
 abstract class AbstractBrowserTestCase extends AbstractBaseTest
 {

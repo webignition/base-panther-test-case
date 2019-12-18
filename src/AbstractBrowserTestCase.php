@@ -34,7 +34,7 @@ abstract class AbstractBrowserTestCase extends AbstractBaseTest
         static::stopWebServer();
     }
 
-    private static function stopWebServer()
+    private static function stopWebServer(): void
     {
         self::$webServerRunner->stop();
     }

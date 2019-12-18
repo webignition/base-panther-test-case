@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace webignition\BasePantherTestCase\Tests\Functional;
 
@@ -8,8 +10,8 @@ use webignition\SymfonyPantherWebServerRunner\Options;
 
 class AbstractBrowserTestCaseTest extends AbstractBrowserTestCase
 {
-    const FIXTURES_RELATIVE_PATH = '/Fixtures';
-    const FIXTURES_HTML_RELATIVE_PATH = '/html';
+    private const FIXTURES_RELATIVE_PATH = '/Fixtures';
+    private const FIXTURES_HTML_RELATIVE_PATH = '/html';
 
     public static function setUpBeforeClass(): void
     {

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8f2e2acb46da1ddb2b71df3e1075c5d",
+    "content-hash": "432fb86d7bac1bf83cc9517e67276741",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -2024,16 +2024,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v4.3.5",
+            "version": "v4.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "50556892f3cc47d4200bfd1075314139c4c9ff4b"
+                "reference": "51c0135ef3f44c5803b33dc60e96bf4f77752726"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/50556892f3cc47d4200bfd1075314139c4c9ff4b",
-                "reference": "50556892f3cc47d4200bfd1075314139c4c9ff4b",
+                "url": "https://api.github.com/repos/symfony/process/zipball/51c0135ef3f44c5803b33dc60e96bf4f77752726",
+                "reference": "51c0135ef3f44c5803b33dc60e96bf4f77752726",
                 "shasum": ""
             },
             "require": {
@@ -2042,7 +2042,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.3-dev"
+                    "dev-master": "4.4-dev"
                 }
             },
             "autoload": {
@@ -2069,7 +2069,7 @@
             ],
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
-            "time": "2019-09-26T21:17:10+00:00"
+            "time": "2019-11-28T13:33:56+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -3582,6 +3582,48 @@
                 "standards"
             ],
             "time": "2019-09-17T11:12:18+00:00"
+        },
+        {
+            "name": "webignition/symfony-panther-webserver-runner",
+            "version": "0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webignition/symfony-panther-webserver-runner.git",
+                "reference": "2f2c204b41251ee97c71d2ded4312b8c10ed9f59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webignition/symfony-panther-webserver-runner/zipball/2f2c204b41251ee97c71d2ded4312b8c10ed9f59",
+                "reference": "2f2c204b41251ee97c71d2ded4312b8c10ed9f59",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2",
+                "symfony/panther": "^0.6"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "^0.12",
+                "phpunit/phpunit": "^8.5",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "webignition\\SymfonyPantherWebServerRunner\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Cram",
+                    "email": "webignition@gmail.com"
+                }
+            ],
+            "homepage": "https://github.com/webignition/symfony-panther-webserver-runner",
+            "time": "2019-12-18T17:29:16+00:00"
         }
     ],
     "aliases": [],

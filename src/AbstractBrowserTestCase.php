@@ -4,38 +4,51 @@ declare(strict_types=1);
 
 namespace webignition\BasePantherTestCase;
 
-use webignition\BaseBasilTestCase\AbstractBaseTest;
+use PHPUnit\Framework\TestCase;
+use Symfony\Component\Panther\Client;
+use Symfony\Component\Panther\Client as PantherClient;
+use webignition\SymfonyPantherWebServerRunner\Options;
 use webignition\SymfonyPantherWebServerRunner\WebServerRunner;
 
-abstract class AbstractBrowserTestCase extends AbstractBaseTest
+abstract class AbstractBrowserTestCase extends TestCase
 {
+    private const WEB_SERVER_DIR = __DIR__ . '/../fixtures/html';
+
     /**
      * @var WebServerRunner
      */
     private static $webServerRunner;
 
     /**
+     * @var PantherClient
+     */
+    protected static $client;
+
+    /**
      * @var string|null
      */
-    protected static $webServerDir;
+    protected static $webServerDir = self::WEB_SERVER_DIR;
+
+    /**
+     * @var string|null
+     */
+    protected static $baseUri;
 
     public static function setUpBeforeClass(): void
     {
-        self::$webServerRunner = new WebServerRunner((string) realpath((string) self::$webServerDir));
+        if (null === self::$baseUri) {
+            self::$baseUri = Options::getBaseUri();
+        }
+
+        self::$webServerRunner = new WebServerRunner((string) realpath(self::$webServerDir));
         self::$webServerRunner->start();
 
-        parent::setUpBeforeClass();
+        self::$client = Client::createChromeClient(null, null, [], self::$baseUri);
     }
 
     public static function tearDownAfterClass(): void
     {
-        parent::tearDownAfterClass();
-
-        static::stopWebServer();
-    }
-
-    private static function stopWebServer(): void
-    {
         self::$webServerRunner->stop();
+        self::$client->quit();
     }
 }

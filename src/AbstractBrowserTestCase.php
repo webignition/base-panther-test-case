@@ -14,20 +14,9 @@ abstract class AbstractBrowserTestCase extends TestCase
 {
     private const WEB_SERVER_DIR = __DIR__ . '/../fixtures/html';
 
-    /**
-     * @var WebServerRunner
-     */
-    private static $webServerRunner;
-
-    /**
-     * @var PantherClient
-     */
-    protected static $client;
-
-    /**
-     * @var string|null
-     */
-    protected static $webServerDir = self::WEB_SERVER_DIR;
+    private static WebServerRunner $webServerRunner;
+    protected static PantherClient $client;
+    protected static ?string $webServerDir = self::WEB_SERVER_DIR;
 
     /**
      * @var string|null

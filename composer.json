@@ -39,6 +39,7 @@
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "3.*",
-        "phpstan/phpstan": "^0.12.75"
+        "phpstan/phpstan": "^0.12.75",
+        "dbrekelmans/bdi": "^0.3.0"
     }
 }

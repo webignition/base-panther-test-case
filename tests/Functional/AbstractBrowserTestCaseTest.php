@@ -23,7 +23,7 @@ class AbstractBrowserTestCaseTest extends AbstractBrowserTestCase
         parent::setUpBeforeClass();
     }
 
-    public function testExamineBrowser()
+    public function testExamineBrowser(): void
     {
         $crawler = self::$client->request('GET', Options::getBaseUri() . '/index.html');
 

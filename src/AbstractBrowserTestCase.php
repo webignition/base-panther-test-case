@@ -29,7 +29,7 @@ abstract class AbstractBrowserTestCase extends TestCase
             self::$baseUri = Options::getBaseUri();
         }
 
-        self::$webServerRunner = new WebServerRunner((string) realpath(self::$webServerDir));
+        self::$webServerRunner = new WebServerRunner((string) realpath((string) self::$webServerDir));
         self::$webServerRunner->start();
 
         self::$client = Client::createChromeClient(null, null, [], self::$baseUri);

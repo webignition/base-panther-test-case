@@ -34,7 +34,7 @@
     "require": {
         "php": ">=7.4",
         "symfony/panther": "^0.7",
-        "phpunit/phpunit": "~9",
+        "phpunit/phpunit": "^9.5",
         "webignition/symfony-panther-webserver-runner": ">=0.3,<1"
     },
     "require-dev": {

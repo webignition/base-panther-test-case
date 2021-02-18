@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b1ab10bd2f687a6d4adc340a2055307c",
+    "content-hash": "793e50ce6592a65c35346e52ddb9d656",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -3063,16 +3063,16 @@
         },
         {
             "name": "webignition/symfony-panther-webserver-runner",
-            "version": "0.4",
+            "version": "0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webignition/symfony-panther-webserver-runner.git",
-                "reference": "cfa9d13bbcdecbe50f15aaef4e341f3be03c6b95"
+                "reference": "ccf0d9338a1f2218e6b6a36c01b1ef7e957ad13a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webignition/symfony-panther-webserver-runner/zipball/cfa9d13bbcdecbe50f15aaef4e341f3be03c6b95",
-                "reference": "cfa9d13bbcdecbe50f15aaef4e341f3be03c6b95",
+                "url": "https://api.github.com/repos/webignition/symfony-panther-webserver-runner/zipball/ccf0d9338a1f2218e6b6a36c01b1ef7e957ad13a",
+                "reference": "ccf0d9338a1f2218e6b6a36c01b1ef7e957ad13a",
                 "shasum": ""
             },
             "require": {
@@ -3104,9 +3104,9 @@
             "homepage": "https://github.com/webignition/symfony-panther-webserver-runner",
             "support": {
                 "issues": "https://github.com/webignition/symfony-panther-webserver-runner/issues",
-                "source": "https://github.com/webignition/symfony-panther-webserver-runner/tree/0.4"
+                "source": "https://github.com/webignition/symfony-panther-webserver-runner/tree/0.5"
             },
-            "time": "2021-02-12T16:19:31+00:00"
+            "time": "2021-02-18T14:35:13+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -6963,7 +6963,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": ">=7.4"
+        "php": ">=7.4|^8"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

@@ -13,15 +13,12 @@ use webignition\SymfonyPantherWebServerRunner\WebServerRunner;
 abstract class AbstractBrowserTestCase extends TestCase
 {
     private const WEB_SERVER_DIR = __DIR__ . '/../fixtures/html';
-
-    private static WebServerRunner $webServerRunner;
     protected static PantherClient $client;
     protected static ?string $webServerDir = self::WEB_SERVER_DIR;
 
-    /**
-     * @var string|null
-     */
-    protected static $baseUri;
+    protected static ?string $baseUri = null;
+
+    private static WebServerRunner $webServerRunner;
 
     public static function setUpBeforeClass(): void
     {
